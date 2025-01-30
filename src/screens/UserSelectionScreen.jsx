@@ -26,7 +26,7 @@ const UserSelectionScreen = ({ navigation }) => {
                             <Text style={styles.textWhite}>Dealer</Text>
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.nextButton}>
+                    <TouchableOpacity style={styles.nextButton} onPress={()=>{navigation.navigate('Login')}}>
                         <Text style={styles.buttonText}>Next &rarr;</Text>
                     </TouchableOpacity>
                 </View>

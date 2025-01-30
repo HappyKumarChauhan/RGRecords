@@ -1,7 +1,13 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const WelcomeScreen = ({ navigation }) => {
+    // useEffect(() => {
+    // setTimeout(() => {
+    //     navigation.navigate('SelectUser')
+    // }, 1000);
+    // }, [])
+    
     return (
         <View style={styles.main}>
             <ImageBackground
