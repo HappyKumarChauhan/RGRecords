@@ -1,0 +1,61 @@
+RGRecordsApp/
+├── android/                     # Android native project files  
+├── ios/                         # iOS native project files  
+├── assets/                      # Static assets (images, icons, fonts)  
+│   ├── icons/  
+│   ├── fonts/  
+│   └── images/  
+├── src/                         # Main application source code  
+│   ├── api/                     # API calls and service logic  
+│   │   ├── auth.js              # Authentication API logic  
+│   │   ├── events.js            # Event-related API logic  
+│   │   └── notifications.js     # Notification API logic  
+│   ├── components/              # Reusable UI components  
+│   │   ├── Button.js  
+│   │   ├── Input.js  
+│   │   └── Card.js  
+│   ├── config/                  # Configuration files  
+│   │   ├── firebaseConfig.js    # Firebase setup  
+│   │   └── apiConfig.js         # Base API configurations  
+│   ├── hooks/                   # Custom React hooks  
+│   │   └── useAuth.js  
+│   ├── navigation/              # Navigation logic (React Navigation)  
+│   │   ├── AppNavigator.js      # Main app navigator  
+│   │   └── AuthNavigator.js     # Authentication-related screens  
+│   ├── screens/                 # Screen components categorized by feature  
+│   │   ├── Auth/                # Authentication screens  
+│   │   │   ├── LoginScreen.js  
+│   │   │   ├── RegisterScreen.js  
+│   │   │   └── UserTypeScreen.js  
+│   │   ├── Dashboard/           # Dashboard & Event-related screens  
+│   │   │   ├── DashboardScreen.js  
+│   │   │   ├── EventDetailsScreen.js  
+│   │   │   └── NotificationsScreen.js  
+│   │   ├── Profile/             # User profile management  
+│   │   │   ├── MyAccountScreen.js  
+│   │   │   └── EditProfileScreen.js  
+│   │   ├── Artist/              # Artist-specific functionalities  
+│   │   │   ├── ArtistDashboard.js  
+│   │   │   ├── ReviewMediaScreen.js  
+│   │   │   └── ApprovalsScreen.js  
+│   │   ├── Results/             # Audition results & performance  
+│   │   │   ├── ResultsScreen.js  
+│   │   │   └── PerformanceDetails.js  
+│   ├── services/                # Service logic (e.g., storage, notifications)  
+│   │   ├── notificationService.js  
+│   │   ├── storageService.js     # Async storage for local data  
+│   │   └── mediaService.js       # Media handling logic  
+│   ├── store/                   # State management (Redux or Context API)  
+│   │   ├── actions/  
+│   │   ├── reducers/  
+│   │   └── store.js  
+│   ├── styles/                  # Global styling  
+│   │   ├── colors.js  
+│   │   └── themes.js  
+│   ├── utils/                   # Utility functions and helpers  
+│   │   ├── helpers.js  
+│   │   └── validators.js  
+├── .env                         # Environment variables  
+├── App.js                       # Main entry point for the app  
+├── package.json                 # Project dependencies  
+└── README.md                    # Project documentation  
