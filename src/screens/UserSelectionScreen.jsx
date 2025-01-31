@@ -1,10 +1,11 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import LinearGradient from 'react-native-linear-gradient';
 
 const UserSelectionScreen = ({ navigation }) => {
     return (
-        <View style={styles.main}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
             <View style={styles.topSection}>
                 <Text style={styles.topSectionText}>RG</Text>
             </View>
@@ -26,12 +27,12 @@ const UserSelectionScreen = ({ navigation }) => {
                             <Text style={styles.textWhite}>Dealer</Text>
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.nextButton} onPress={()=>{navigation.navigate('Login')}}>
+                    <TouchableOpacity style={styles.nextButton} onPress={()=>{navigation.navigate('LogIn')}}>
                         <Text style={styles.buttonText}>Next &rarr;</Text>
                     </TouchableOpacity>
                 </View>
             </View>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
     main: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#27363E'
     },
     topSection: {
 

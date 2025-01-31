@@ -1,5 +1,6 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
+import LinearGradient from 'react-native-linear-gradient';
 
 const WelcomeScreen = ({ navigation }) => {
     // useEffect(() => {
@@ -9,7 +10,7 @@ const WelcomeScreen = ({ navigation }) => {
     // }, [])
     
     return (
-        <View style={styles.main}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
             <ImageBackground
                 source={{ uri: 'https://s3-alpha-sig.figma.com/img/f873/7185/6241fa22bb30fe971b8a772b127be54a?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K535hPRgq3mwolWIWcC2HzLUJ-8MF-N~rw7H3So6342rXWO5sBGPsAY91U5fFPDquFswAlu9I5y7uZ9I9-j5Qg-MQJarunfjTTZr~55G9qk~36VFkz02N-7LBlhrUkaGEH7xMxwK~Qpm9gcqWYebCP0Y~KFMkWvl19rie0Q0OtrpR4I6WWiNcr9VBFdaegvIy8OpSmTHgNPbsJ3c4pfqWQGMqPWfFGffas97drcsQ36Ba47MUiTzusuS7H5TTlbLpjEs92vnkZ0ER0QjxjsIno3kgiWd0i2sDyx6V9DM2AsPs50jkha7CrjV5sOsEHmgZug2aQ1AknMNNkdCe33o7w__' }}
                 // resizeMode='repeat'
@@ -35,7 +36,7 @@ const WelcomeScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </ImageBackground>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -44,7 +45,6 @@ export default WelcomeScreen
 const styles = StyleSheet.create({
     main: {
         flex: 1,
-        backgroundColor: '#27363E'
     },
     backgroundImage: {
         flex: 1,
@@ -72,6 +72,9 @@ const styles = StyleSheet.create({
     middleSectionHeading: {
         fontSize: 24,
         fontWeight: 700,
+        fontFamily: Platform.select({
+            android: 'Playwrite In', // Name used in assets/fonts
+          }),
         color: '#A3EEE8',
         lineHeight: 28,
         textDecorationLine: 'underline',

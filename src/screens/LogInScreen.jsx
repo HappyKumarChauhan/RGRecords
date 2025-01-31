@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
+import LinearGradient from 'react-native-linear-gradient';
+
 const LogInScreen = ({ navigation }) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
 
     return (
-        <View style={styles.main}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
             <ImageBackground
                 source={{ uri: 'https://s3-alpha-sig.figma.com/img/f873/7185/6241fa22bb30fe971b8a772b127be54a?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K535hPRgq3mwolWIWcC2HzLUJ-8MF-N~rw7H3So6342rXWO5sBGPsAY91U5fFPDquFswAlu9I5y7uZ9I9-j5Qg-MQJarunfjTTZr~55G9qk~36VFkz02N-7LBlhrUkaGEH7xMxwK~Qpm9gcqWYebCP0Y~KFMkWvl19rie0Q0OtrpR4I6WWiNcr9VBFdaegvIy8OpSmTHgNPbsJ3c4pfqWQGMqPWfFGffas97drcsQ36Ba47MUiTzusuS7H5TTlbLpjEs92vnkZ0ER0QjxjsIno3kgiWd0i2sDyx6V9DM2AsPs50jkha7CrjV5sOsEHmgZug2aQ1AknMNNkdCe33o7w__' }}
                 // resizeMode='repeat'
@@ -20,11 +22,11 @@ const LogInScreen = ({ navigation }) => {
                     <Text style={styles.title}>LogIn</Text>
                     <View style={styles.inputContainer}>
                         <Icon name="mail" size={30} color="black" />
-                        <TextInput placeholderTextColor="#606060" placeholder="Email" />
+                        <TextInput style={styles.input} placeholderTextColor="#606060" placeholder="Email" />
                     </View>
                     <View style={styles.inputContainer}>
                         <Icon name="lock" size={30} color="black" />
-                        <TextInput placeholderTextColor="#606060" placeholder="Password" />
+                        <TextInput style={styles.input} placeholderTextColor="#606060" placeholder="Password" />
                     </View>
                     <View style={styles.checkBoxAndForgotContainer}>
                         <TouchableOpacity
@@ -43,6 +45,7 @@ const LogInScreen = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity
+                    onPress={()=>{navigation.navigate('Home')}}
                         style={styles.button}                    >
                         <Text style={styles.buttonText}>Log In</Text>
                     </TouchableOpacity >
@@ -71,14 +74,13 @@ const LogInScreen = ({ navigation }) => {
                     </View>
                 </View>
             </ImageBackground>
-        </View>
+        </LinearGradient>
     );
 };
 
 const styles = StyleSheet.create({
     main: {
         flex: 1,
-        backgroundColor: '#27363E'
     },
     backgroundImage: {
         flex: 1,
@@ -119,6 +121,10 @@ const styles = StyleSheet.create({
         borderColor: '#00343C',
         flexDirection: 'row',
         alignItems: 'center',
+    },
+    input:{
+        flex:1,
+        color:'black',
     },
     button: {
         alignItems: 'center',

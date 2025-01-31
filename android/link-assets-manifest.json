@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/PlaywriteIN-ExtraLight.ttf",
+      "sha1": "8069e16b02217216a13da3d73fc5674168e82105"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIN-Light.ttf",
+      "sha1": "08be1a93b2064f2cd104ccb81c5a81bc9a309f8a"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIN-Regular.ttf",
+      "sha1": "10d738bed9500ed5471ed4d36b96580d8ee80120"
+    },
+    {
+      "path": "src/assets/fonts/PlaywriteIN-Thin.ttf",
+      "sha1": "b604d9e31232df77649b79d0f604e4ca2531ef31"
+    }
+  ]
+}

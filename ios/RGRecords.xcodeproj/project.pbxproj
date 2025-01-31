@@ -11,6 +11,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9605BB255F1F496D85D6FCC4 /* PlaywriteIN-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67A4FA28A724D84B189BF1B /* PlaywriteIN-ExtraLight.ttf */; };
+		41D4EDEDFCF14C9C8EDAD66C /* PlaywriteIN-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45069044C7A44B8A99C447D /* PlaywriteIN-Light.ttf */; };
+		38329F390EF847C1B7401080 /* PlaywriteIN-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42FF40FF185F406EB1788FEC /* PlaywriteIN-Regular.ttf */; };
+		863A5C9435514526B7006BEF /* PlaywriteIN-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BF5721B854642AAB4421102 /* PlaywriteIN-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RGRecords/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RGRecords/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B67A4FA28A724D84B189BF1B /* PlaywriteIN-ExtraLight.ttf */ = {isa = PBXFileReference; name = "PlaywriteIN-ExtraLight.ttf"; path = "../src/assets/fonts/PlaywriteIN-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F45069044C7A44B8A99C447D /* PlaywriteIN-Light.ttf */ = {isa = PBXFileReference; name = "PlaywriteIN-Light.ttf"; path = "../src/assets/fonts/PlaywriteIN-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		42FF40FF185F406EB1788FEC /* PlaywriteIN-Regular.ttf */ = {isa = PBXFileReference; name = "PlaywriteIN-Regular.ttf"; path = "../src/assets/fonts/PlaywriteIN-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4BF5721B854642AAB4421102 /* PlaywriteIN-Thin.ttf */ = {isa = PBXFileReference; name = "PlaywriteIN-Thin.ttf"; path = "../src/assets/fonts/PlaywriteIN-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2783D34E22944465A509A899 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,6 +124,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		2783D34E22944465A509A899 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B67A4FA28A724D84B189BF1B /* PlaywriteIN-ExtraLight.ttf */,
+				F45069044C7A44B8A99C447D /* PlaywriteIN-Light.ttf */,
+				42FF40FF185F406EB1788FEC /* PlaywriteIN-Regular.ttf */,
+				4BF5721B854642AAB4421102 /* PlaywriteIN-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -185,6 +206,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				9605BB255F1F496D85D6FCC4 /* PlaywriteIN-ExtraLight.ttf in Resources */,
+				41D4EDEDFCF14C9C8EDAD66C /* PlaywriteIN-Light.ttf in Resources */,
+				38329F390EF847C1B7401080 /* PlaywriteIN-Regular.ttf in Resources */,
+				863A5C9435514526B7006BEF /* PlaywriteIN-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
