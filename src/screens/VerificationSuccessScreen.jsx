@@ -12,7 +12,7 @@ const VerificationSuccessScreen = ({ navigation }) => {
                 </View>
                 <Text style={styles.title}>Verified</Text>
                 <Text style={styles.subtitle}>You have successfully verified your account</Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('LogIn')}>
                     <Text style={styles.buttonText}>Back to Login</Text>
                 </TouchableOpacity>
             </View>

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const DashboardScreen = () => {
+const DashboardScreen = ({ navigation }) => {
     const data = [
         { id: 1, date: '14 Jan 2025', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { id: 2, date: '14 Jan 2025', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -27,7 +27,9 @@ const DashboardScreen = () => {
                             <Text style={styles.description} ellipsizeMode="tail">
                                 {item.description}
                             </Text>
-                            <TouchableOpacity style={styles.applyButton}>
+                            <TouchableOpacity style={styles.applyButton}
+                            onPress={()=>{navigation.navigate('EventDetails')}}
+                            >
                                 <Text style={styles.applyButtonText}>Apply</Text>
                             </TouchableOpacity>
                         </View>
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignContent:'flex-end',
         paddingVertical: 3,
         alignItems: 'center', // Align items vertically centered
     },

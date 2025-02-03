@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import DashboardScreen from '../screens/DashboardScreen';
+import DashboardScreen from '../screens/DashboardScreen'
 
 const HomeScreen = () => (
     <View style={styles.screenContainer}>
@@ -30,7 +30,7 @@ const ProfileScreen = () => (
 
 const Tab = createBottomTabNavigator();
 
-const App = () => {
+const App = ({ navigation }) => {
     return (
             <Tab.Navigator
                 screenOptions={({ route }) => ({
