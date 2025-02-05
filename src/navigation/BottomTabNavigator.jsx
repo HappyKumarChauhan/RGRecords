@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import DashboardScreen from '../screens/DashboardScreen'
+import ProfileScreen from '../screens/ProfileScreen';
 
 const HomeScreen = () => (
     <View style={styles.screenContainer}>
@@ -22,11 +23,6 @@ const NotificationsScreen = () => (
     </View>
 );
 
-const ProfileScreen = () => (
-    <View style={styles.screenContainer}>
-        <Text>Profile Screen</Text>
-    </View>
-);
 
 const Tab = createBottomTabNavigator();
 

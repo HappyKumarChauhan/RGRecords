@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import LinearGradient from 'react-native-linear-gradient';
 
 const EventDetailsScreen = ({navigation}) => {
     return (
-        <View style={styles.container}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
             <View style={styles.header}>
                 <Icon name='menu' size={30} color='white' />
                 <Text style={styles.headerTitle}>Event Details</Text>
@@ -31,14 +32,13 @@ const EventDetailsScreen = ({navigation}) => {
                 <Icon name="arrow-forward" size={20} color="white" />
             </TouchableOpacity>
             </View>
-        </View>
+        </LinearGradient>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#2E4F4F',
         padding: 10,
     },
     header: {

@@ -3,16 +3,16 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const VerificationSuccessScreen = ({ navigation }) => {
+const SuccessKycScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#306165', '#27363E']} style={styles.main}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.iconContainer}>
                     <Icon name="check-circle" size={60} color="#27363E" />
                 </View>
-                <Text style={styles.title}>Verified</Text>
+                <Text style={styles.title}>Approved</Text>
                 <Text style={styles.subtitle}>You have successfully verified your account</Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('LogIn')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.buttonText}>Back to Login</Text>
                 </TouchableOpacity>
             </View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#27363E',
         borderRadius: 8,
         paddingVertical: 12,
-        paddingHorizontal: 30,
+        paddingHorizontal: 60,
     },
     buttonText: {
         color: 'white',
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default VerificationSuccessScreen;
+export default SuccessKycScreen;

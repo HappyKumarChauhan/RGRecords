@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 const DashboardScreen = ({ navigation }) => {
     const data = [
@@ -12,7 +14,7 @@ const DashboardScreen = ({ navigation }) => {
     ];
 
     return (
-        <View style={styles.container}>
+        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
             <View style={styles.header}>
                 <Icon name='menu' size={30} color='white' />
                 <Text style={styles.headerTitle}>Dashboard</Text>
@@ -36,7 +38,7 @@ const DashboardScreen = ({ navigation }) => {
                     </View>
                 ))}
             </ScrollView>
-        </View>
+        </LinearGradient>
     );
 };
 
