@@ -45,16 +45,17 @@ const AddressDetailsScreen = ({ navigation }) => {
     };
     
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity
                     onPress={() => { navigation.goBack() }}
                 >
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Address Details</Text>
                 <Text></Text>
             </View>
+             <View style={styles.horizontalLine}></View>
             <ScrollView style={styles.detailsContainer}>
                 <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ab dolor blanditiis harum distinctio sit impedit deleniti accusamus reiciendis quo cumque doloremque esse dolorum veniam ullam at, cupiditate in eaque incidunt iure, sapiente labore quia exercitationem sint. Asperiores voluptatibus, fugit porro quod obcaecati, amet dolorem iure repellendus eos optio mollitia.</Text>
                 <TextInput style={styles.input} placeholder="Address Line 1" placeholderTextColor="#ffffff" />
@@ -83,8 +84,9 @@ const AddressDetailsScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.applyButton}
                 onPress={() => { navigation.navigate('Qualification') }}
             >
+                <Text></Text>
                 <Text style={styles.applyButtonText}>Next</Text>
-                <Icon name="arrow-forward" size={20} color="black" />
+                 <Icon name="keyboard-arrow-right" size={30} color="black" />
             </TouchableOpacity>
         </LinearGradient>
     );
@@ -105,6 +107,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'white',
+    },
+    horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
     },
     detailsContainer: {
         marginTop: 20,
@@ -144,11 +151,11 @@ const styles = StyleSheet.create({
     },
     applyButton: {
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        padding: 15,
-        marginHorizontal: 20,
+        padding: 10,
+        marginHorizontal: 10,
         borderRadius: 10,
         marginBottom: 20,
     },

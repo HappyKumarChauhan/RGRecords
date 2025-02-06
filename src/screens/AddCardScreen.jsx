@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import LinearGradient from "react-native-linear-gradient";
+import { ScrollView } from "react-native-gesture-handler";
 
 const AddCardScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name="arrow-back" size={30} color="white" />
+                    <Icon name="keyboard-arrow-left" size={30} color="white" />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Add Card</Text>
                 <Text></Text>
             </View>
+             <View style={styles.horizontalLine}></View>
+             <ScrollView style= {{flex:1}}>
 
             <View style={styles.section}>
                 <TouchableOpacity style={styles.sectionHeader}>
@@ -33,6 +36,7 @@ const AddCardScreen = ({ navigation }) => {
                     <Text style={styles.checkBoxText}>Save this card for faster payments.</Text>
                 </TouchableOpacity>
             </View>
+            </ScrollView>
 
             <TouchableOpacity style={styles.payButton}>
                 <Text style={styles.payButtonText}>Pay now</Text>
@@ -45,19 +49,24 @@ const AddCardScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: { 
         flex: 1, 
-        padding: 10 
+        padding: 10, 
     },
     header: { 
         flexDirection: "row", 
         justifyContent: "space-between", 
         alignItems: "center", 
-        paddingVertical: 10 
+        // paddingVertical: 10 
     },
     headerTitle: { 
         fontSize: 18, 
         fontWeight: "bold", 
         color: "white"
      },
+     horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
+    },
     section: { 
         backgroundColor: "#3A4E52", 
         borderRadius: 8, 
@@ -92,7 +101,7 @@ const styles = StyleSheet.create({
     checkBoxContainer: { 
         flexDirection: "row", 
         alignItems: "center", 
-        marginTop: 15 
+        marginTop: 30,
     },
     checkBoxText: { 
         color: "white", 
@@ -104,10 +113,11 @@ const styles = StyleSheet.create({
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: "#ffffff", 
-        padding: 15, 
+        padding: 10, 
         borderRadius: 10, 
         marginBottom: 20, 
-        marginTop: 20 
+        marginTop: 20 ,
+        marginHorizontal:10
     },
     payButtonText: { 
         color: "black", 

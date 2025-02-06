@@ -16,7 +16,7 @@ const QualificationScreen = ({ navigation }) => {
     ];
 
     return (
-        <LinearGradient colors={['rgba(48, 97, 101, 1)', 'rgba(39, 54, 62, 1)']} style={{ flex: 1 }}>
+        <LinearGradient colors={['#27363E', '#306165']} style={{ flex: 1 }}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        padding: 8,
+        padding: 10,
         borderRadius: 10,
         marginBottom: 20,
     },

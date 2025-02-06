@@ -10,11 +10,13 @@ const KYCDetails = ({ navigation }) => {
         <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>KYC Details</Text>
                 <Text></Text>
             </View>
+             <View style={styles.horizontalLine}></View>
+             <View style={{flex:1, justifyContent:'center'}}>
             <View style={styles.detailsContainer}>
                 <View style={styles.imageContainer}>
                     <Icon name='account-circle' size={80} color='white' />
@@ -42,6 +44,7 @@ const KYCDetails = ({ navigation }) => {
                     <Text style={styles.buttonText}>Next →</Text>
                 </TouchableOpacity>
             </View>
+            </View>
         </LinearGradient>
     );
 };
@@ -55,18 +58,24 @@ import { FadeIn } from 'react-native-reanimated';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent:''
+        padding:10
+        // justifyContent:'space-between'
     },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 20,
+        paddingVertical:1,
     },
     headerTitle: {
         fontSize: 18,
         color: 'white',
         fontWeight: 'bold',
+    },
+    horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
     },
     detailsContainer: {
         alignItems: 'center',
@@ -127,6 +136,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         width: '100%',
+        marginTop: 30,
     },
     buttonText: {
         color: '#27363E',

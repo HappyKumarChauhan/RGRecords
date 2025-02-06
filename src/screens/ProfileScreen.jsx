@@ -5,12 +5,12 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const ProfileScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['rgba(48, 97, 101, 1)', 'rgba(39, 54, 62, 1)']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity
                     onPress={() => { navigation.goBack() }}
                 >
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Profile</Text>
                 <Text></Text>

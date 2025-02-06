@@ -7,12 +7,12 @@ const TermsScreen = ({ navigation }) => {
     const [isChecked, setIsChecked] = useState(false);
 
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity
                     onPress={() => { navigation.goBack() }}
                 >
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Terms & Conditions</Text>
                 <Text></Text>
@@ -37,8 +37,9 @@ const TermsScreen = ({ navigation }) => {
                     style={styles.applyButton}
                     onPress={() => { navigation.navigate('PersonalInfo') }}
                 >
+                    <Text></Text>
                     <Text style={styles.applyButtonText}>Next</Text>
-                    <Icon name="arrow-forward" size={20} color="black" />
+                     <Icon name="keyboard-arrow-right" size={30} color="black" />
                 </TouchableOpacity>
             </View>
         </LinearGradient>
@@ -98,10 +99,10 @@ const styles = StyleSheet.create({
     },
     applyButton: {
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         marginBottom: 20,
     },

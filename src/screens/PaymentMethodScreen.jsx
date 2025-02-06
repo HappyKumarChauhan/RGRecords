@@ -5,17 +5,18 @@ import LinearGradient from "react-native-linear-gradient";
 
 const PaymentMethodScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name="arrow-back" size={30} color="white" />
+                    <Icon name="keyboard-arrow-left" size={30} color="white" />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Payment Method</Text>
                 <Text></Text>
             </View>
+            <View style={styles.horizontalLine}></View>
 
             <ScrollView style={styles.content}>
-                <View style={styles.section}>
+                <LinearGradient colors={['#2A444B', '#2E5A5E']} style={styles.section}>
                     <TouchableOpacity style={styles.sectionHeader}>
                         <View style={{ flexDirection: 'row', gap: 5 }}>
                             <Icon name="payments" size={24} color="white" />
@@ -37,31 +38,35 @@ const PaymentMethodScreen = ({ navigation }) => {
                             <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </TouchableOpacity>
                     </View>
-                </View>
+                </LinearGradient>
 
-                <View style={styles.section}>
+                <LinearGradient colors={['#2A444B', '#2E5A5E']} style={styles.section}>
                     <TouchableOpacity style={styles.sectionHeader}>
                         <View style={{ flexDirection: 'row', gap: 5 }}>
                             <Icon name="credit-card" size={24} color="white" />
                             <Text style={styles.sectionTitle}>Credit/ Debit Cards</Text>
+                             <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </View>
                         <Icon name="keyboard-arrow-down" size={24} color="white" />
                     </TouchableOpacity>
                     <View style={styles.optionsContainer}>
                         <TouchableOpacity style={styles.option}>
                             <Text style={styles.optionText}>VISA Bank **** 1234</Text>
+                            <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.option}>
                             <Text style={styles.optionText}>HDFC Bank **** 1234</Text>
+                            <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </TouchableOpacity>
                         <TouchableOpacity
                             style={styles.option}
                             onPress={() => navigation.navigate("AddCard")}
                         >
                             <Text style={styles.optionText}>+ Add Card</Text>
+                            <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </TouchableOpacity>
                     </View>
-                </View>
+                </LinearGradient>
 
                 <TouchableOpacity style={styles.section}>
                     <View style={styles.sectionHeader}>
@@ -75,9 +80,10 @@ const PaymentMethodScreen = ({ navigation }) => {
             </ScrollView>
 
             <TouchableOpacity style={styles.payButton}
-            onPress={()=>{navigation.navigate('PaymentSuccess')}}>
+                onPress={() => { navigation.navigate('PaymentSuccess') }}>
+                <Text></Text>
                 <Text style={styles.payButtonText}>Pay now</Text>
-                <Icon name="arrow-forward" size={20} color="black" />
+                <Icon name="keyboard-arrow-right" size={30} color="black" />
             </TouchableOpacity>
         </LinearGradient>
     );
@@ -92,7 +98,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingVertical: 10
+        paddingVertical: 5,
+        marginBottom:5
 
     },
     headerTitle: {
@@ -100,9 +107,14 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "white"
     },
+    horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 1,
+    },
     content: {
         marginTop: 20,
-        padding:10,
+        padding: 10,
     },
     section: {
         backgroundColor: "#305E62",
@@ -139,13 +151,13 @@ const styles = StyleSheet.create({
     },
     payButton: {
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: "#ffffff",
-        padding: 15,
+        padding: 10,
         borderRadius: 10,
         marginBottom: 20,
-        marginHorizontal:10,
+        marginHorizontal: 10,
     },
     payButtonText: {
         color: "black",

@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const EventDetailsScreen = ({navigation}) => {
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <Icon name='menu' size={30} color='white' />
                 <Text style={styles.headerTitle}>Event Details</Text>

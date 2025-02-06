@@ -14,11 +14,13 @@ const BusinessDetails = ({ navigation }) => {
                 <Text style={styles.headerTitle}>Business Details</Text>
                 <Text></Text>
             </View>
+            <View style={styles.horizontalLine}></View>
             <ScrollView style={styles.detailsContainer}>
                 <View style={styles.formGroup}>
                     <Text style={styles.label}>Business Description</Text>
                     <TextInput style={styles.input} multiline />
                 </View>
+                
                 <View style={styles.formGroup}>
                     <Text style={styles.label}>Service Catagories</Text>
                     <TextInput style={styles.input} multiline />
@@ -72,12 +74,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingVertical: 10,
+        paddingVertical: 1,
     },
     headerTitle: {
         fontSize: 18,
         fontWeight: 'bold',
         color: 'white',
+    },
+    horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
     },
     formGroup: {
         marginVertical: 5,
@@ -96,7 +103,7 @@ const styles = StyleSheet.create({
     },
     input: {
         backgroundColor: '#D9D9D91A',
-        minHeight:50,
+        minHeight:90,
         color: 'white',
         padding: 10,
         marginBottom: 1,

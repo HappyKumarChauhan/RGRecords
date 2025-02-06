@@ -1,11 +1,21 @@
-import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import LinearGradient from 'react-native-linear-gradient';
 
 const UserSelectionScreen = ({ navigation }) => {
+    const [selectedUserType, setSelectedUserType] = useState(null);
+
+    const handleNext = () => {
+        if (selectedUserType === 'user') {
+            navigation.navigate('LogIn'); // Navigate to the User page
+        } else if (selectedUserType === '') {
+            navigation.navigate('SignUp'); // Navigate to the Dealer page
+        }
+    };
+
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>
             <View style={styles.topSection}>
                 <Text style={styles.topSectionText}>RG</Text>
             </View>
@@ -18,96 +28,102 @@ const UserSelectionScreen = ({ navigation }) => {
                     <Text style={styles.primaryText}>Select User Type &rarr;</Text>
                     <Text style={styles.secondaryText}>To Continue, please select your user type</Text>
                     <View style={styles.boxContainer}>
-                        <View style={styles.box}>
+                        <TouchableOpacity
+                            style={[styles.box, selectedUserType === 'user' && styles.selectedBox]}
+                            onPress={() => setSelectedUserType('user')}
+                        >
                             <Icon name="person" size={40} color="white" />
                             <Text style={styles.textWhite}>User</Text>
-                        </View>
-                        <View style={styles.box}>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={[styles.box, selectedUserType === 'dealer' && styles.selectedBox]}
+                            onPress={() => setSelectedUserType('dealer')}
+                        >
                             <Icon name="handshake" size={40} color="white" />
                             <Text style={styles.textWhite}>Dealer</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
-                    <TouchableOpacity style={styles.nextButton} onPress={()=>{navigation.navigate('LogIn')}}>
+                    <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
                         <Text style={styles.buttonText}>Next &rarr;</Text>
                     </TouchableOpacity>
                 </View>
             </View>
         </LinearGradient>
-    )
-}
+    );
+};
 
-export default UserSelectionScreen
+export default UserSelectionScreen;
 
 const styles = StyleSheet.create({
     main: {
         flex: 1,
         padding: 20,
     },
-    topSection: {
-
-    },
+    topSection: {},
     topSectionText: {
         color: 'white',
         fontSize: 24,
-        fontWeight: 700
+        fontWeight: '700',
     },
     container: {
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
     },
     header: {
-        alignItems: 'center'
+        alignItems: 'center',
     },
     headerTitle: {
         color: 'white',
         fontSize: 16,
         marginVertical: 20,
-        fontWeight: 700
+        fontWeight: '700',
     },
     horizontalLine: {
         height: 0.5,
         backgroundColor: 'white',
-        width: "100%"
+        width: '100%',
     },
     selectionContainer: {
         marginVertical: 20,
         paddingVertical: 30,
-        gap: 15
+        gap: 15,
     },
     primaryText: {
         color: 'white',
         fontSize: 16,
-        fontWeight: 700
+        fontWeight: '700',
     },
     secondaryText: {
         color: 'white',
-        fontSize: 12
+        fontSize: 12,
     },
     boxContainer: {
         marginVertical: 15,
         flexDirection: 'row',
         gap: 8,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     box: {
-        width:'50%',
+        width: '50%',
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
         borderColor: 'white',
-        height: 150
+        height: 150,
     },
-    nextButton:{ 
-        backgroundColor: 'black', 
-        paddingVertical: 8, 
-        alignItems: 'center', 
-        borderRadius: 10 
+    selectedBox: {
+        backgroundColor: '#27363E', // Green color for selected
     },
-    buttonText:{
-        color:'white',
-        fontWeight:700
+    nextButton: {
+        backgroundColor: 'black',
+        paddingVertical: 8,
+        alignItems: 'center',
+        borderRadius: 10,
     },
-    textWhite:{
-        color:'white'
-    }
-
-})
+    buttonText: {
+        color: 'white',
+        fontWeight: '700',
+    },
+    textWhite: {
+        color: 'white',
+    },
+});

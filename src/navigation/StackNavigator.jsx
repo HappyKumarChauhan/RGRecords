@@ -21,6 +21,7 @@ import BusinessDetails from '../screens/BusinessScreen';
 import KYCDetails from '../screens/KYCScreen';
 import KYCDetailsScreen from '../screens/KycIdScreen';
 import SuccessKycScreen from '../screens/SuccessKyc';
+import PostEventDetailsScreen from '../screens/PostEventScreen';
 
 
 const Stack = createStackNavigator()
@@ -52,6 +53,7 @@ const StackNavigator = () => {
         <Stack.Screen name="KYC" component={KYCDetails} />
         <Stack.Screen name="KycId" component={KYCDetailsScreen} />
         <Stack.Screen name="Success" component={SuccessKycScreen} />
+        <Stack.Screen name="PostEvent" component={PostEventDetailsScreen} />
 
         
         

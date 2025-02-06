@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const VerificationSuccessScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#306165', '#27363E']} style={styles.main}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.iconContainer}>
                     <Icon name="check-circle" size={60} color="#27363E" />
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#27363E',
         borderRadius: 8,
         paddingVertical: 12,
-        paddingHorizontal: 30,
+        paddingHorizontal: 50,
     },
     buttonText: {
         color: 'white',

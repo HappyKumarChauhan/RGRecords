@@ -5,14 +5,15 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const PaymentSuccessScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.container}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Payment</Text>
                 <Text></Text>
             </View>
+               <View style={styles.horizontalLine}></View>
             <View style={styles.detailsContainer}>
                 <Icon name="check-circle" size={100} color="white" />
 
@@ -20,7 +21,8 @@ const PaymentSuccessScreen = ({ navigation }) => {
                 <Text style={styles.description}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </Text>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button}
+                 onPress={() => navigation.navigate('PostEvent')}>
                     <Text style={styles.buttonText}>Event Details</Text>
                 </TouchableOpacity>
             </View>
@@ -37,12 +39,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingVertical: 10,
+        paddingVertical: 1,
     },
     headerTitle: {
         fontSize: 18,
         fontWeight: 'bold',
         color: 'white',
+    },
+    horizontalLine: {
+        height: 0.5,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
     },
     detailsContainer: {
         marginTop: 20,

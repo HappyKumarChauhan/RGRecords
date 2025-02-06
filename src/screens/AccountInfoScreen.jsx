@@ -10,18 +10,19 @@ const AccountInformation = ({ navigation }) => {
     const genders = [
         { id: '1', label: 'Male', value: 'male', color: '#ffffff', labelStyle: { color: '#ffffff' } },
         { id: '2', label: 'Female', value: 'female', color: '#ffffff', labelStyle: { color: '#ffffff' } },
-        { id: '3', label: 'Other (Chhakka)', value: 'other', color: '#ffffff', labelStyle: { color: '#ffffff' } },
+        { id: '3', label: 'Other', value: 'other', color: '#ffffff', labelStyle: { color: '#ffffff' } },
     ];
 
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name='arrow-back' size={30} color='white' />
+                    <Icon name='keyboard-arrow-left' size={30} color='white' />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Personal Details</Text>
                 <Text></Text>
             </View>
+             <View style={styles.horizontalLine}></View>
             <ScrollView style={styles.detailsContainer}>
                 <View style={styles.profileContainer}>
                     <Icon name='account-circle' size={60} color='white' />
@@ -52,6 +53,7 @@ const AccountInformation = ({ navigation }) => {
                         onPress={setSelectedGender}
                         selectedId={selectedGender}
                         layout='row'
+                        containerStyle={{ justifyContent: 'space-between' }}
                     />
 
                 </View>
@@ -85,6 +87,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
     },
+    horizontalLine: {
+        height: 0.2,
+        backgroundColor: '#ffffff',
+        marginTop: 5,
+    },
     detailsContainer: {
         marginTop: 20,
         paddingHorizontal: 10,
@@ -110,7 +117,7 @@ const styles = StyleSheet.create({
     },
     formGroup: {
         marginVertical: 5,
-        gap: 5
+        gap: 5,
     },
     label: {
         color: 'white',

@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const SuccessKycScreen = ({ navigation }) => {
     return (
-        <LinearGradient colors={['#57787B', '#27363E']} style={styles.main}>
+        <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.iconContainer}>
                     <Icon name="check-circle" size={60} color="#27363E" />

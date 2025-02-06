@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import DashboardScreen from '../screens/DashboardScreen'
 import ProfileScreen from '../screens/ProfileScreen';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const HomeScreen = () => (
     <View style={styles.screenContainer}>
@@ -17,11 +18,11 @@ const TasksScreen = () => (
     </View>
 );
 
-const NotificationsScreen = () => (
-    <View style={styles.screenContainer}>
-        <Text>Notifications Screen</Text>
-    </View>
-);
+// const NotificationsScreen = () => (
+//     <View style={styles.screenContainer}>
+//         <Text>Notifications Screen</Text>
+//     </View>
+// );
 
 
 const Tab = createBottomTabNavigator();
@@ -61,7 +62,7 @@ const App = ({ navigation }) => {
             >
                 <Tab.Screen name="Dashboard" component={DashboardScreen} />
                 <Tab.Screen name="Tasks" component={TasksScreen} />
-                <Tab.Screen name="Notifications" component={NotificationsScreen} />
+                <Tab.Screen name="Notifications" component={NotificationScreen} />
                 <Tab.Screen name="Profile" component={ProfileScreen} />
             </Tab.Navigator>
     );
