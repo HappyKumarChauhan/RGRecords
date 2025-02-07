@@ -5,14 +5,16 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const UserSelectionScreen = ({ navigation }) => {
     const [selectedUserType, setSelectedUserType] = useState(null);
-
     const handleNext = () => {
         if (selectedUserType === 'user') {
-            navigation.navigate('LogIn'); // Navigate to the User page
-        } else if (selectedUserType === '') {
-            navigation.navigate('SignUp'); // Navigate to the Dealer page
+            navigation.navigate('Home'); // Navigate to the User page
+        } else if (selectedUserType === 'dealer') {  // Fix this condition
+            navigation.navigate('Business'); // Navigate to the Dealer page
+        } else {
+            alert('Please select a user type'); // Prevent navigation if nothing is selected
         }
     };
+    
 
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>

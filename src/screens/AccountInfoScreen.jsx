@@ -63,7 +63,7 @@ const AccountInformation = ({ navigation }) => {
                 </View>
             </ScrollView>
             <TouchableOpacity style={styles.button}
-                onPress={() => { navigation.navigate('Business') }}>
+                onPress={() => { navigation.navigate('SignUpOtp') }}>
                 <Text style={styles.buttonText}>Next</Text>
                 <Icon name='arrow-forward' size={20} color='black' />
             </TouchableOpacity>

@@ -35,7 +35,7 @@ const SignUpScreen = ({ navigation }) => {
                         <TextInput style={styles.input} placeholderTextColor="#606060" placeholder="Password" secureTextEntry={!passwordVisible} />
                     </View>
                     <TouchableOpacity
-                    onPress={()=>{navigation.navigate('SignUpOtp')}}
+                    onPress={()=>{navigation.navigate('Account')}}
                      style={styles.button}>
                         <Text style={styles.buttonText} >Sign Up</Text>
                     </TouchableOpacity>

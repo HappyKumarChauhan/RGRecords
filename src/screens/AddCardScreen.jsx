@@ -17,7 +17,7 @@ const AddCardScreen = ({ navigation }) => {
              <View style={styles.horizontalLine}></View>
              <ScrollView style= {{flex:1}}>
 
-            <View style={styles.section}>
+            <LinearGradient colors={['#2A444B', '#2E5A5E']} style={styles.section}>
                 <TouchableOpacity style={styles.sectionHeader}>
                     <Text style={styles.sectionTitle}>Credit/ Debit Cards</Text>
                     <Icon name="arrow-drop-down" size={24} color="white" />
@@ -35,7 +35,7 @@ const AddCardScreen = ({ navigation }) => {
                     <Icon name="check-box-outline-blank" size={20} color="white" />
                     <Text style={styles.checkBoxText}>Save this card for faster payments.</Text>
                 </TouchableOpacity>
-            </View>
+            </LinearGradient>
             </ScrollView>
 
             <TouchableOpacity style={styles.payButton}>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     section: { 
-        backgroundColor: "#3A4E52", 
+        // backgroundColor: "#3A4E52", 
         borderRadius: 8, 
         padding: 15, 
         marginTop: 20,
@@ -85,11 +85,12 @@ const styles = StyleSheet.create({
         color: "white" 
     },
     input: { 
-        borderBottomWidth: 1, 
+        borderWidth: 0.5,
+        borderRadius:5, 
         borderBottomColor: "#ffffff", 
         paddingVertical: 10, 
         color: "white", 
-        marginTop: 15 
+        marginVertical:13,
     },
     row: { 
         flexDirection: "row", 

@@ -31,11 +31,11 @@ const NotificationScreen = ({ navigation }) => {
                 <View style={styles.notificationItem}>
                   {/* Circular border around the icon */}
                   <View style={styles.iconContainer}>
-                    <Icon name="notifications" size={24} color="white" />
+                    <Icon name="notifications" size={20} color="white" />
                   </View>
                   <Text style={styles.notificationText}>{item.message}</Text>
                   <TouchableOpacity>
-                    <Icon name="close" size={20} color="white" />
+                    <Icon name="close" size={18} color="white" />
                   </TouchableOpacity>
                 </View>
                 {/* Add horizontal line after each notification item */}
@@ -84,10 +84,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   notificationItem: {
-    padding: 10,
+    paddingVertical:5,
     borderRadius: 10,
     flexDirection: "row",
-    alignItems: "center",
+    // alignItems: "center",
     justifyContent: "space-between",
     marginBottom: 10,
   },
@@ -103,12 +103,12 @@ const styles = StyleSheet.create({
     opacity: 0.3, // Make it subtle
   },
   iconContainer: {
-    width: 40,     // Width of the circular border
-    height: 40,    // Height of the circular border
+    width: 30,     // Width of the circular border
+    height: 30,    // Height of the circular border
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20, // Making it circular
-    borderWidth: 2,   // White border around the icon
+    borderWidth: 1,   // White border around the icon
     borderColor: "white",
     marginRight: 10,
   },
