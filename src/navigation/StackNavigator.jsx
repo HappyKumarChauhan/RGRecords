@@ -1,32 +1,36 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from '../screens/WelcomeScreen';
-import UserSelectionScreen from '../screens/UserSelectionScreen';
-import LogInScreen from '../screens/LogInScreen';
-import SignUpScreen from '../screens/SignUpScreen';
-import SignUpOtpScreen from '../screens/SignUpOtpScreen';
-import VerificationSuccessScreen from '../screens/VerificationSuccessScreen';
+import UserSelectionScreen from '../screens/auth/UserSelectionScreen';
+import LogInScreen from '../screens/auth/LogInScreen';
+import SignUpScreen from '../screens/auth/SignUpScreen';
+import SignUpOtpScreen from '../screens/auth/SignUpOtpScreen';
+import VerificationSuccessScreen from '../screens/auth/VerificationSuccessScreen';
 import BottomTabNavigator from './BottomTabNavigator'
-import EventDetailsScreen from '../screens/EventDetailsScreen';
-import TermsScreen from '../screens/TermsScreen';
-import PersonalInfoScreen from '../screens/PersonalInfoScreen';
-import AddressDetailsScreen from '../screens/AddressDetailsScreen';
-import PaymentMethodScreen from '../screens/PaymentMethodScreen';
-import AddCardScreen from '../screens/AddCardScreen';
-import QualificationScreen from '../screens/QualificationScreen';
-import EditProfileScreen from '../screens/EditProfileScreen';
-import PaymentSuccessScreen from '../screens/PaymentSuccessScreen';
-import AccountInformation from '../screens/AccountInfoScreen';
-import BusinessDetails from '../screens/BusinessScreen';
-import KYCDetails from '../screens/KYCScreen';
-import KYCDetailsScreen from '../screens/KycIdScreen';
-import SuccessKycScreen from '../screens/SuccessKyc';
-import PostEventDetailsScreen from '../screens/PostEventScreen';
+import EventDetailsScreen from '../screens/event/EventDetailsScreen';
+import TermsScreen from '../screens/event/TermsScreen';
+import PersonalInfoScreen from '../screens/event/PersonalInfoScreen';
+import AddressDetailsScreen from '../screens/event/AddressDetailsScreen';
+import PaymentMethodScreen from '../screens/payment/PaymentMethodScreen';
+import AddCardScreen from '../screens/payment/AddCardScreen';
+import QualificationScreen from '../screens/event/QualificationScreen';
+import EditProfileScreen from '../screens/profile/EditProfileScreen';
+import PaymentSuccessScreen from '../screens/payment/PaymentSuccessScreen';
+import AccountInformation from '../screens/auth/AccountInfoScreen';
+import BusinessDetails from '../screens/auth/BusinessScreen';
+import KYCDetails from '../screens/auth/KYCScreen';
+import KYCDetailsScreen from '../screens/auth/KycIdScreen';
+import SuccessKycScreen from '../screens/auth/SuccessKyc';
+import PostEventDetailsScreen from '../screens/event/PostEventScreen';
+import { useEffect } from 'react';
+import { StatusBar } from 'react-native';
 
 
 const Stack = createStackNavigator()
 
 const StackNavigator = () => {
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome"

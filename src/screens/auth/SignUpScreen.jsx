@@ -35,24 +35,25 @@ const SignUpScreen = ({ navigation }) => {
                         <TextInput style={styles.input} placeholderTextColor="#606060" placeholder="Password" secureTextEntry={!passwordVisible} />
                     </View>
                     <TouchableOpacity
-                    onPress={()=>{navigation.navigate('Account')}}
-                     style={styles.button}>
+                        onPress={() => { navigation.navigate('Account') }}
+                        style={styles.button}>
                         <Text style={styles.buttonText} >Sign Up</Text>
                     </TouchableOpacity>
-                    <View style={{ marginVertical: 15 }}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <View style={{ width: '30%', height: 1, backgroundColor: 'gray' }}></View>
+
+                    <View style={styles.signUpOptions}>
+                        <View style={styles.signUpOptionsHeader}>
+                            <View style={styles.line}></View>
                             <Text>Sign up with</Text>
-                            <View style={{ width: '30%', height: 1, backgroundColor: 'gray' }}></View>
+                            <View style={styles.line}></View>
                         </View>
-                        <View style={{ marginVertical: 10, flexDirection: 'row', justifyContent: 'center', gap: '10', }}>
-                            <View style={{ width: 45, height: 45, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'black', borderRadius: 8, backgroundColor: 'white' }}>
+                        <View style={styles.signUpOptionsIconContainer}>
+                            <View style={styles.signUpOptionIcon}>
                                 <FAIcon name="google" size={30} />
                             </View>
-                            <View style={{ width: 45, height: 45, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'black', borderRadius: 8, backgroundColor: 'white' }}>
+                            <View style={styles.signUpOptionIcon}>
                                 <FAIcon name="facebook" size={30} />
                             </View>
-                            <View style={{ width: 45, height: 45, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'black', borderRadius: 8, backgroundColor: 'white' }}>
+                            <View style={styles.signUpOptionIcon}>
                                 <FAIcon name="apple" size={30} />
                             </View>
                         </View>
@@ -113,9 +114,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
-    input:{
-        flex:1,
-        color:'black',
+    input: {
+        flex: 1,
+        color: 'black',
     },
     button: {
         alignItems: 'center',
@@ -146,6 +147,35 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'blue'
     },
+    signUpOptions: {
+        marginVertical: 15
+    },
+    signUpOptionsHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    line: {
+        width: '30%',
+        height: 1,
+        backgroundColor: 'gray'
+    },
+    signUpOptionsIconContainer: {
+        marginVertical: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: '10',
+    },
+    signUpOptionIcon: {
+        width: 45,
+        height: 45,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 8,
+        backgroundColor: 'white'
+    }
 });
 
 export default SignUpScreen;

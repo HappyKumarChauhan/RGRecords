@@ -31,7 +31,7 @@ const ProfileScreen = ({ navigation }) => {
                     </View>
 
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+                <View style={styles.editProfileButton}>
                     <TouchableOpacity onPress={()=>{navigation.navigate('EditProfile')}}>
                         <Text style={styles.editProfileText}>✏️ Edit Profile</Text>
                     </TouchableOpacity>
@@ -154,6 +154,10 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: '#ddd',
         marginBottom: 5,
+    },
+    editProfileButton:{ 
+        flexDirection: 'row', 
+        justifyContent: 'flex-end' 
     },
     editProfileText: {
         fontSize: 14,

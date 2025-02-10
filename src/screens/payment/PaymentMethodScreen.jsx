@@ -2,19 +2,12 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import LinearGradient from "react-native-linear-gradient";
+import PrimaryHeader from "../../components/utils/PrimaryHeader";
 
 const PaymentMethodScreen = ({ navigation }) => {
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Icon name="keyboard-arrow-left" size={30} color="white" />
-                </TouchableOpacity>
-                <Text style={styles.headerTitle}>Payment Method</Text>
-                <Text></Text>
-            </View>
-            <View style={styles.horizontalLine}></View>
-
+            <PrimaryHeader title="Payment Method" navigation={navigation} />
             <ScrollView style={styles.content}>
                 <LinearGradient colors={['#2A444B', '#2E5A5E']} style={styles.section}>
                     <TouchableOpacity style={styles.sectionHeader}>
@@ -45,7 +38,7 @@ const PaymentMethodScreen = ({ navigation }) => {
                         <View style={{ flexDirection: 'row', gap: 5 }}>
                             <Icon name="credit-card" size={24} color="white" />
                             <Text style={styles.sectionTitle}>Credit/ Debit Cards</Text>
-                             <Icon name="keyboard-arrow-right" size={16} color="white" />
+                            <Icon name="keyboard-arrow-right" size={16} color="white" />
                         </View>
                         <Icon name="keyboard-arrow-down" size={24} color="white" />
                     </TouchableOpacity>
@@ -92,29 +85,10 @@ const PaymentMethodScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10
-    },
-    header: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingVertical: 5,
-        marginBottom:5
-
-    },
-    headerTitle: {
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "white"
-    },
-    horizontalLine: {
-        height: 0.5,
-        backgroundColor: '#ffffff',
-        marginTop: 1,
-    },
+    },  
     content: {
         marginTop: 20,
-        padding: 10,
+        paddingHorizontal: 15,
     },
     section: {
         backgroundColor: "#305E62",

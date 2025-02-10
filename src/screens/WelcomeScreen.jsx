@@ -1,14 +1,9 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import LinearGradient from 'react-native-linear-gradient';
+import { StatusBar } from 'react-native';
 
 const WelcomeScreen = ({ navigation }) => {
-    // useEffect(() => {
-    // setTimeout(() => {
-    //     navigation.navigate('SelectUser')
-    // }, 1000);
-    // }, [])
-    
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>
             <ImageBackground

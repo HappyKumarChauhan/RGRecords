@@ -17,7 +17,6 @@ const PostEventDetailsScreen = () => {
         <Text style={styles.headerTitle}>Event Details</Text>
       </View>
 
-
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <Image
           source={{ uri: 'https://s3-alpha-sig.figma.com/img/9acd/1f77/5ce1994b905750cc34f37ddf33a81cdf?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=HAHC4IgRIOD1~2mNcIedZpjt3iA9~czw7AhUri7~ujI8kkSLbnYpM0Hpbj9coibDXRAHplhnC6akpBzdruASHnMUfE1X5ZZVhflQEjfXNqv8N64YmRKiEHhl-svtcWQWaeSZy5XLQZ4bQXV5yNbWdAEdAruQXR7FUoEVW-e1l2STCBgGG8vb2dKeyvBO6q7xWhAX1di4f2W6xzTIXROb9aunWE4O4WWIWj0iuAQTyIdXtPgsV6SB9zoGEsH5P4FdwYYYmd77QD-kdQslrWYy~w-DlCVBKXBfIqvcoarjPirojqy5q3VYZJTNevsAp91Cz0Vb1sWW~M8uePVkO5JNAQ__' }}

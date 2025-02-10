@@ -4,6 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import RadioGroup from 'react-native-radio-buttons-group';
+import PrimaryHeader from '../../components/utils/PrimaryHeader';
 const PersonalInfoScreen = ({ navigation }) => {
     const [selectedGender, setSelectedGender] = useState(undefined)
     const genders = [
@@ -13,16 +14,8 @@ const PersonalInfoScreen = ({ navigation }) => {
     ];
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity
-                    onPress={() => { navigation.goBack() }}
-                >
-                    <Icon name='keyboard-arrow-left' size={30} color='white' />
-                </TouchableOpacity>
-                <Text style={styles.headerTitle}>Personal Details</Text>
-                <Text></Text>
-            </View>
-              <View style={styles.horizontalLine}></View>
+            <PrimaryHeader navigation={navigation} title="Personal Details" />
+
             <ScrollView style={styles.detailsContainer}>
                 <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas officiis id velit incidunt vitae illo officia cum in beatae quaerat. At quis accusamus ea sapiente non distinctio nulla optio magni incidunt ipsam libero magnam voluptate veritatis debitis itaque velit rem aut asperiores, nesciunt sit doloremque placeat. Officia officiis odit error nobis repellat culpa eveniet commodi voluptatum molestiae rem ab ducimus, sapiente praesentium repellendus reiciendis sint iusto sunt numquam. Corrupti eius recusandae expedita, obcaecati fuga nemo velit. Illum eius consectetur, voluptatibus rerum inventore blanditiis voluptas perspiciatis molestiae sed hic voluptatum unde aliquam dolorem quisquam labore assumenda placeat possimus alias ducimus iure.</Text>
                 <View style={styles.profileDetails}>
@@ -61,28 +54,10 @@ const PersonalInfoScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
-    },
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingVertical: 3,
-    },
-    headerTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: 'white',
-    },
-    horizontalLine: {
-        height: 0.5,
-        backgroundColor: 'white',
-        width: '100%',
-        marginTop: 10,
     },
     detailsContainer: {
         marginTop: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
     },
     description: {
         fontSize: 12,

@@ -2,22 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import LinearGradient from 'react-native-linear-gradient';
+import PrimaryHeader from '../../components/utils/PrimaryHeader';
 
 const TermsScreen = ({ navigation }) => {
     const [isChecked, setIsChecked] = useState(false);
 
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity
-                    onPress={() => { navigation.goBack() }}
-                >
-                    <Icon name='keyboard-arrow-left' size={30} color='white' />
-                </TouchableOpacity>
-                <Text style={styles.headerTitle}>Terms & Conditions</Text>
-                <Text></Text>
-            </View>
-            <View style={styles.horizontalLine}></View>
+            <PrimaryHeader navigation={navigation} title="Terms & Conditions" />
             <View style={styles.detailsContainer}>
                 <ScrollView style={styles.contentContainer}>
                     <Text style={styles.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab non, labore laboriosam reprehenderit magni molestiae ex dolor natus vel, eius magnam corporis beatae alias fuga sapiente praesentium voluptates blanditiis voluptatem eveniet dolorum tenetur quos nobis nihil accusamus? Dignissimos, culpa? Dolores magni, laudantium laboriosam dolorem voluptatum impedit esse incidunt a cumque ducimus earum. Quas!</Text>
@@ -39,7 +31,7 @@ const TermsScreen = ({ navigation }) => {
                 >
                     <Text></Text>
                     <Text style={styles.applyButtonText}>Next</Text>
-                     <Icon name="keyboard-arrow-right" size={30} color="black" />
+                    <Icon name="keyboard-arrow-right" size={30} color="black" />
                 </TouchableOpacity>
             </View>
         </LinearGradient>
@@ -49,27 +41,10 @@ const TermsScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
-    },
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingVertical: 3,
-    },
-    headerTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: 'white',
-    },
-    horizontalLine: {
-        height: 0.5,
-        backgroundColor: '#ffffff',
-        marginTop: 10,
     },
     detailsContainer: {
         marginTop: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
         flex: 1,
     },
     contentContainer: {

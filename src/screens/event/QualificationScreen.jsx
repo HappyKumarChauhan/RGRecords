@@ -3,8 +3,9 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import RadioGroup from 'react-native-radio-buttons-group';
 import LinearGradient from 'react-native-linear-gradient';
-import StudentSection from '../components/qualificationPage/StudentSection';
-import JobSection from '../components/qualificationPage/JobSection';
+import StudentSection from '../../components/qualificationPage/StudentSection';
+import JobSection from '../../components/qualificationPage/JobSection';
+import PrimaryHeader from '../../components/utils/PrimaryHeader';
 
 const QualificationScreen = ({ navigation }) => {
     const [selectedEmployment, setSelectedEmployment] = useState(undefined);
@@ -18,15 +19,7 @@ const QualificationScreen = ({ navigation }) => {
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={{ flex: 1 }}>
             <View style={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()}>
-                        <Icon name='keyboard-arrow-left' size={30} color='white' />
-                    </TouchableOpacity>
-                    <Text style={styles.headerTitle}>Qualification</Text>
-                    <Text></Text>
-                </View>
-                <View style={styles.horizontalLine}></View>
-
+                <PrimaryHeader title="Qualification Details" navigation={navigation}/>
                 <ScrollView style={styles.detailsContainer}>
                     <View>
                         <Text style={styles.description}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni veniam, a accusantium placeat nulla nobis molestias beatae tempora doloremque assumenda consequatur delectus commodi reprehenderit aperiam eum voluptas omnis! Totam sapiente, sequi aliquid eos repellat sit sint! Earum, sit voluptatibus voluptatem commodi cupiditate voluptate debitis, ipsa unde totam nemo incidunt omnis.</Text>
@@ -59,28 +52,10 @@ const QualificationScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: '#2E4F4F',
-        padding: 10,
-    },
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingVertical: 3,
-    },
-    headerTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: 'white',
-    },
-    horizontalLine: {
-        height: 0.5,
-        backgroundColor: '#ffffff',
-        marginTop: 10,
     },
     detailsContainer: {
         marginTop: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
     },
     description: {
         fontSize: 12,

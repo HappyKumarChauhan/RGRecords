@@ -3,11 +3,13 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground } 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
+import { useEffect } from 'react';
+import { StatusBar } from 'react-native';
 
 const LogInScreen = ({ navigation }) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-
+    
     return (
         <LinearGradient colors={['#27363E', '#306165']} style={styles.main}>
             <ImageBackground
@@ -45,26 +47,26 @@ const LogInScreen = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity
-                    onPress={()=>{navigation.navigate('SelectUser')}}
+                        onPress={() => { navigation.navigate('SelectUser') }}
                         style={styles.button}>
                         <Text style={styles.buttonText}>Log In</Text>
                     </TouchableOpacity >
 
-                    <View style={{marginVertical:15}}>
-                        <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
-                            <View style={{width:'30%',height:1,backgroundColor:'gray'}}></View>
+                    <View style={styles.loginOptions}>
+                        <View style={styles.loginOptionsHeader}>
+                            <View style={styles.line}></View>
                             <Text>Log in with</Text>
-                            <View style={{width:'30%',height:1,backgroundColor:'gray'}}></View>
+                            <View style={styles.line}></View>
                         </View>
-                        <View style={{marginVertical:10,flexDirection:'row',justifyContent:'center',gap:'10',}}>
-                            <View style={{width:45,height:45,justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'black',borderRadius:8,backgroundColor:'white'}}>
-                            <FAIcon name="google" size={30}/>
+                        <View style={styles.loginOptionsIconContainer}>
+                            <View style={styles.loginOptionsIcon}>
+                                <FAIcon name="google" size={30} />
                             </View>
-                            <View style={{width:45,height:45,justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'black',borderRadius:8,backgroundColor:'white'}}>
-                            <FAIcon name="facebook" size={30}/>
+                            <View style={styles.loginOptionsIcon}>
+                                <FAIcon name="facebook" size={30} />
                             </View>
-                            <View style={{width:45,height:45,justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'black',borderRadius:8,backgroundColor:'white'}}>
-                            <FAIcon name="apple" size={30}/>
+                            <View style={styles.loginOptionsIcon}>
+                                <FAIcon name="apple" size={30} />
                             </View>
                         </View>
                     </View>
@@ -122,9 +124,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
-    input:{
-        flex:1,
-        color:'black',
+    input: {
+        flex: 1,
+        color: 'black',
     },
     button: {
         alignItems: 'center',
@@ -155,22 +157,51 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'blue'
     },
-    checkBoxAndForgotContainer:{
-        width:'100%',
-        flexDirection:'row',
+    checkBoxAndForgotContainer: {
+        width: '100%',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        padding:8
+        padding: 8
     },
-    checkBoxButton:{
-        flexDirection: 'row', 
+    checkBoxButton: {
+        flexDirection: 'row',
         alignItems: 'center'
     },
     forgotPasswordText: {
         fontSize: 14,
         fontWeight: 'bold',
         color: '#00343C',
-        textDecorationLine:'underline'
+        textDecorationLine: 'underline'
     },
+    loginOptions: {
+        marginVertical: 15
+    },
+    loginOptionsHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    line: {
+        width: '30%',
+        height: 1,
+        backgroundColor: 'gray'
+    },
+    loginOptionsIconContainer: {
+        marginVertical: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: '10',
+    },
+    loginOptionsIcon: {
+        width: 45,
+        height: 45,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 8,
+        backgroundColor: 'white'
+    }
 })
 
 export default LogInScreen;

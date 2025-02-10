@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import DashboardScreen from '../screens/DashboardScreen'
-import ProfileScreen from '../screens/ProfileScreen';
-import NotificationScreen from '../screens/NotificationScreen';
+import DashboardScreen from '../screens/dashboard/DashboardScreen'
+import ProfileScreen from '../screens/profile/ProfileScreen';
+import NotificationScreen from '../screens/dashboard/NotificationScreen';
 
 const HomeScreen = () => (
     <View style={styles.screenContainer}>
