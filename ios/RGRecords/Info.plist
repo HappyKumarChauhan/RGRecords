@@ -4,6 +4,10 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location to show it on the map</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera to take selfies</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need access to your microphone for video recording</string>
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

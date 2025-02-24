@@ -58,8 +58,6 @@ const StackNavigator = () => {
         <Stack.Screen name="KycId" component={KYCDetailsScreen} />
         <Stack.Screen name="Success" component={SuccessKycScreen} />
         <Stack.Screen name="PostEvent" component={PostEventDetailsScreen} />
-
-        
         
       </Stack.Navigator>
     </NavigationContainer>
